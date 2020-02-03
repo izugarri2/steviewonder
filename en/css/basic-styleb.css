@@ -366,7 +366,7 @@ BASE (MOBILE) SIZE
 
 /* typography */
 body{
-	background: #000000 url(https://sites.google.com/site/magiasoul/inicio/Stevie-fondo.jpg) no-repeat center center fixed;
+	background: #000000 url(https://cdn.steviewonder.es/images/Stevie-fondo.jpg) no-repeat center center fixed;
 	color:#FFFFFF;
 	font-family:'Ubuntu', Arial, Helvetica, sans-serif; 
 	font-size:1em;
