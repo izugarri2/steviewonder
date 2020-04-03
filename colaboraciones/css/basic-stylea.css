@@ -351,7 +351,6 @@ template {
 /*! FIN normalize.css 8 | */
 
 
-
 /*
 Simple Responsive Template v 1.2
 
@@ -395,8 +394,9 @@ display: block;
 margin: 10px auto;
 }
 
+/* cookies css*/
+.cc_banner-wrapper{z-index:9001;position:relative}.cc_container .cc_btn{cursor:pointer;text-align:center;font-size:0.6em;transition:font-size 200ms;line-height:1em}.cc_container .cc_message{font-size:0.6em;transition:font-size 200ms;margin:0;padding:0;line-height:1.5em}.cc_container .cc_logo{display:none;text-indent:-1000px;overflow:hidden;width:100px;height:22px;background-size:cover;opacity:0.9;transition:opacity 200ms}.cc_container .cc_logo:hover,.cc_container .cc_logo:active{opacity:1}@media screen and (min-width: 500px){.cc_container .cc_btn{font-size:0.8em}.cc_container .cc_message{font-size:0.8em}}@media screen and (min-width: 768px){.cc_container .cc_btn{font-size:1em}.cc_container .cc_message{font-size:1em;line-height:1em}}@media screen and (min-width: 992px){.cc_container .cc_message{font-size:1em}}@media print{.cc_banner-wrapper,.cc_container{display:none}}.cc_container{position:fixed;left:0;right:0;bottom:0;overflow:hidden;padding:5px}.cc_container .cc_btn{padding:8px 10px;background-color:#f1d600;cursor:pointer;transition:font-size 200ms;text-align:center;font-size:0.6em;display:block;width:33%;margin-left:5px;float:right;max-width:120px}.cc_container .cc_message{transition:font-size 200ms;font-size:0.6em;display:block}@media screen and (min-width: 500px){.cc_container .cc_btn{font-size:0.8em}.cc_container .cc_message{margin-top:0.5em;font-size:0.8em}}@media screen and (min-width: 768px){.cc_container{padding:15px 30px 15px}.cc_container .cc_btn{font-size:1em;padding:8px 15px}.cc_container .cc_message{font-size:1em}}@media screen and (min-width: 992px){.cc_container .cc_message{font-size:1em}}.cc_container{background:#222;opacity:0.8;color:#fff;font-size:17px;font-weight: bold;text-align:center;font-family:"Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;box-sizing:border-box}.cc_container ::-moz-selection{background:#ff5e99;color:#fff;text-shadow:none}.cc_container .cc_btn,.cc_container .cc_btn:visited{color:#000;background-color:#f1d600;transition:background 200ms ease-in-out,color 200ms ease-in-out,box-shadow 200ms ease-in-out;-webkit-transition:background 200ms ease-in-out,color 200ms ease-in-out,box-shadow 200ms ease-in-out;border-radius:5px;-webkit-border-radius:5px}.cc_container .cc_btn:hover,.cc_container .cc_btn:active{background-color:#fff;color:#000}.cc_container a,.cc_container a:visited{text-decoration:none;color:#31a8f0;transition:200ms color}.cc_container a:hover,.cc_container a:active{color:#b2f7ff}@-webkit-keyframes slideUp{0%{-webkit-transform:translateY(66px);transform:translateY(66px)}100%{-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes slideUp{0%{-webkit-transform:translateY(66px);-ms-transform:translateY(66px);transform:translateY(66px)}100%{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}}.cc_container,.cc_message,.cc_btn{animation-duration:0.8s;-webkit-animation-duration:0.8s;-moz-animation-duration:0.8s;-o-animation-duration:0.8s;-webkit-animation-name:slideUp;animation-name:slideUp}
 
-/* links */
 /* links */
 /* añadido para dar color amarillo a los links sin raya abajo */
 a {
@@ -442,7 +442,7 @@ header{
 	font-size: 20px;
 	font-style: normal;
 	font-family: Arial, Helvetica, sans-serif;
-	padding: 30px 20px 40px 20px;
+	padding:20px 20px ;
 }
 #hero h1{ 
 	line-height:1.2em;
@@ -450,12 +450,8 @@ header{
 	margin-bottom:10px;
 	color: #FFFF99;}
 
-.flexslider{
-	display:none;
-}
-
 #content {  
-	margin:10px 0;
+	margin:40px 0;
 }
 
 aside { 
@@ -505,7 +501,7 @@ img{ max-width:100%; height:auto;}
 	text-decoration:none;
 }
 .srt-menu li a:hover{
-	background:#FE2E64;  /* fondo color menu mini al pasar ratÃ³n */
+	background:#FE2E64;  /* fondo color menu mini al pasar raton */
 	color:#fff;
 }
 .srt-menu li li a {
@@ -556,7 +552,7 @@ img{ max-width:100%; height:auto;}
 .grid_11,
 .grid_11a,
 .grid_12 {
-	margin-bottom:20px;
+	margin-bottom:30px;
 	/*positioning and padding*/
 	position: relative;
     min-height: 1px;
@@ -564,11 +560,9 @@ img{ max-width:100%; height:auto;}
     padding-right: 5px;
 }
 
-
-
-
 /*FOOTER*/
-footer{  
+footer{
+    text-align: center;	
 	clear:both;
 	font-size:80%;
 	padding:0px 0;
@@ -595,8 +589,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 footer{
-	 
-    text-align: center;
+	text-align: center;
 	background:#333;
 	color:#ccc;
 }
@@ -630,8 +623,6 @@ a.buttonlink:hover{
 	color:#fff;
 }
 
-
-
 /* Contain floats*/ 
 .clearfix:before,
 .clearfix:after,
@@ -646,16 +637,14 @@ a.buttonlink:hover{
   clear: both;
 }
 
-@media only screen and (min-width: 290px) {
-.play a:hover {display:block; text-decoration: none; background-color:#BD1515;}
-
-}
-
-
 /*
 LARGER MOBILE DEVICES
 This is for mobile devices with a bit larger screens.
 */
+@media only screen and (min-width: 290px) {
+.play a:hover {display:block; text-decoration: none; background-color:#BD1515;}
+
+}
 @media only screen and (min-width: 481px) {
 #banner{
 	float:left;
@@ -667,14 +656,18 @@ This is for mobile devices with a bit larger screens.
 	float:right;
 }
 
-
 } 
 
 /*
-TABLET &amp; SMALLER LAPTOPS
+TABLET & SMALLER LAPTOPS
 The average viewing window and preferred media query for those is 768px.
 But I think that some more breathing space is good:)
 */
+
+@media only screen and (min-width: 768px) {
+
+}
+
 @media only screen and (min-width: 1250px) {
 
 #expanse{ 
@@ -699,7 +692,7 @@ But I think that some more breathing space is good:)
     display: none;
 }
 }
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 919px) {
 
 #expanse{ 
 	margin-bottom:0px;
@@ -718,11 +711,9 @@ But I think that some more breathing space is good:)
 }
 
 .wrapper{
-
 	max-width: 1400px; 
 	margin: .75em auto;
 }
-
 
 #banner{ 
 	float:left; 
@@ -806,10 +797,10 @@ ul.srt-menu li li li.sfHover ul {
 	top:			0;
 }
 
-/*** DEMO1 SKIN MENU NAVEGACION PARA ACCEDER A LAS PAGINAS***/
+/*** DEMO1 SKIN MENU NAVEGACION PARA ACCEDER A LAS PÁGINAS***/
 #topnav, .srt-menu {
 	float:left;
-	margin: .35em 0 0 3.85em;
+	margin: .35em 0 0 1.85em;
 }
 .srt-menu a {
 	text-decoration:none;
@@ -849,43 +840,35 @@ ul.srt-menu li li li.sfHover ul {
 	background:#0099ff;
 }
 
-
-
 /*GRID*/
 /*
- &amp; Columns : 12 
+ & Columns : 12 
 
  */
  
- .rowa{
-	 margin-left: 1px;
-     margin-right: 1px;
-	 margin-bottom: 30px;
-}
-
 .grid_2a,
 .grid_10a {
 	float: left;
 	display: block;
 }
  .row{
-	 margin-left: -5px;
-     margin-right: -5px;
+	 margin-left: 5px;
+     margin-right: 5px;
+	 margin-bottom: 30px;
 }
  
 .grid_1 { width: 8.33333333%; }
 .grid_2 { width: 16.66666667%; }
 .grid_2a { width: 16.66666667%; }
 .grid_3 { width: 25%; }
-.grid_3b { width: 27%; }
 .grid_4 { width: 33.33333333%; }
 .grid_5 { width: 41.66666667%; }
 .grid_6 { width: 50%; }
-.grid_6b { width: 49%; }
 .grid_7 { width: 58.33333333%; }
 .grid_8 { width: 66.66666667%; }
 .grid_9 { width: 75%; }
 .grid_10 { width: 83.33333333%; }
+.grid_10a { width: 83.33333333%; }
 .grid_11 { width: 91.66666667%; }
 .grid_12 { width: 100%; }
 .grid_1a { width: 1%; }
@@ -897,19 +880,12 @@ ul.srt-menu li li li.sfHover ul {
 .grid_4,
 .grid_5,
 .grid_6,
-.grid_6b,
 .grid_7,
 .grid_8,
 .grid_9,
 .grid_10,
 .grid_11,
 .grid_12 {
-	float: left;
-	display: block;
-	font-size: 18px;
-}
-
-.grid_3b {
 	float: left;
 	display: block;
 	font-size: 18px;
@@ -922,32 +898,12 @@ ul.srt-menu li li li.sfHover ul {
 #hero [class*="grid_"] { margin-bottom:-20px;}
 
 }
-
 @media only screen and (min-width: 1200px) {
 
-
-
-/*** DEMO1 SKIN MENU NAVEGACION PARA ACCEDER A LAS PAGINAS***/
-#topnav, .srt-menu {
-	float:left;
-	margin: .35em 0 0 6.85em;
 }
-
-}
-
-/*
-DESKTOP
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*/
 @media only screen and (min-width: 1400px) {
-/*** DEMO1 SKIN MENU NAVEGACION PARA ACCEDER A LAS PAGINAS***/
-#topnav, .srt-menu {
-	float:left;
-	margin: .35em 0 0 10em;
+
 }
-} 
 
 /*
 LARGE VIEWING SIZE
@@ -976,6 +932,24 @@ iPhone 5 or iPod Touch 5th generation styles (you can include your own file if y
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) { 
 
   
+}
+@media only screen and (max-width: 700px) { 
+
+.video {
+    position:relative;
+    width:100%;
+    height:0;
+    padding-bottom:56%;
+	margin: 10px;
+}
+ 
+.video iframe {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
 }
 
 /*
