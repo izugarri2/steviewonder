@@ -867,8 +867,7 @@ function Dig(s){
  return 1;
 }
 function C(l){
- if(BW && !BW.closed) {BW.location.href=l;BW.focus();}
- else BW=window.open(l,"");
+ location.href=l;
 }
 function AW(s){
  var i,n;
@@ -922,7 +921,7 @@ function NS(){
 }
 function SS(){
  if(location.search){
-	var o="€‚ƒ„…†‡ˆ‰Š‹Œ‘’“”•–—˜™š›œŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûüışÿ";
+	var o="??????????????????????????????????????????????????????????????????????????????????????????";
 	var t="";
 	for(var i=3; i<location.search.length; t+=c) {
 		var c=location.search.charAt(i++);
@@ -940,9 +939,7 @@ function SS(){
 //-->
 </script>
 <style>
-img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
-    display: none;
-}
+
 img[src*="https://www.freewebhostingarea.com/images/poweredby.png"] {
     display: none;
 }
@@ -960,6 +957,7 @@ img[src*="https://www.freewebhostingarea.com/images/poweredby.png"] {
       <nav id="topnav" role="navigation">
         <div class="menu-toggle">Menu</div>
         <ul class="srt-menu" style="border-radius:8px; padding:3px; border:groove #EEBBBD" id="menu-main-navigation">
+          <li><a href="//www.steviewonder.es/en/">Home</a></li>
           <li><a href="//www.steviewonder.es/en/Biografia.html">Biography</a></li>
           <li><a href="//www.steviewonder.es/en/discografia.html">Discography</a></li>
           <li><a href="//www.steviewonder.es/en/videos.html">Videos</a></li>
@@ -1004,7 +1002,7 @@ if(window.opener) document.write("| <a href='javascript:window.close()'>Close</a
             <div style="text-align:center"> <a href="//www.steviewonder.es/en/">Home</a> | <a href="//www.steviewonder.es/en/Biografia.html">Biography</a> | <a href="//www.steviewonder.es/en/discografia.html">Discography</a> | <a href="//www.steviewonder.es/en/videos.html">Videos</a> | <a href="//www.steviewonder.es/en/fromtheheart.html">From the heart...</a> | <a href="//www.steviewonder.es/en/Canciones.html">Songs</a> | <a href="//www.steviewonder.es/en/grammys.html">Grammys</a> | <a href="//www.steviewonder.es/en/topten.html">Top Ten</a> | <a href="//www.steviewonder.es/en/billboard.html">Billboard</a>
             </div>
           </div>
-          <div id="copyright" class="wrapper clearfix" style="color:#fff; font-size:11px; line-height:1.4em; text-align: center">steviewonder.es is a registered trademark. All content 2008-2020 by izugarria. Gear<br>
+          <div id="copyright" class="wrapper clearfix" style="color:#fff; font-size:11px; line-height:1.4em; text-align: center">steviewonder.es is a registered trademark. All content 2008-2020 by izugarria. Byet<br>
             All contents of the site including, images, video, names, trademarks &amp; logos, are property of their respective owners.</div>
  
 <!-- fire ups - read this file! jQuery v1.9.0 + cookies + main juntos -->
