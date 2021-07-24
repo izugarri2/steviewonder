@@ -35,8 +35,8 @@
 
 $(document).ready(function() {
     setTimeout(function() {
-        $(".cc_banner-wrapper").fadeOut(6000);
-    },1000);
+        $(".cc_banner-wrapper").fadeOut(3000);
+    },6000);
  
 });
 
