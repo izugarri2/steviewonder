@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname+'/'));
-app.set('x-powered-by', false);
-app.listen(port, () => { console.log(`Escuchando en http://localhost:${port}`)
-})
+
+console.log('escuchando en el puerto 8100 y 8101');
+app.listen(8100);
+app.listen(8101);
