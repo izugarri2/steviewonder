@@ -1,12 +1,15 @@
-FROM denoland/deno:latest
+bashCopy code
+# Use the official Node.js image as the base image
+FROM node:18
 
+# Set the working directory in the container
 WORKDIR /app
 
-COPY deps.ts .
-RUN deno cache deps.ts
+# Copy the application files into the working directory
+COPY . /app
 
-COPY . .
+# Install the application dependencies
+RUN npm install
 
-RUN deno cache src/main.ts
-
-CMD ["run", "--allow-net", "src/main.ts"]
+# Define the entry point for the container
+CMD ["npm", "start"]
