@@ -1,4 +1,12 @@
-FROM nginx:stable-alpine
-COPY . /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+FROM denoland/deno:latest
+
+WORKDIR /app
+
+COPY deps.ts .
+RUN deno cache deps.ts
+
+COPY . .
+
+RUN deno cache src/main.ts
+
+CMD ["run", "--allow-net", "src/main.ts"]
