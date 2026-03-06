@@ -17,7 +17,7 @@ jobs:
 
       - name: Sync with upstream
         run: |
-          git remote add upstream https://github.com
+          git remote add upstream https://github.com/izugarri2/steviewonder.git
           git fetch upstream
           git checkout master
           git merge upstream/master
