@@ -728,7 +728,18 @@ This is for mobile devices with a bit larger screens.
 */
 @media only screen and (min-width: 265px) {
 .play a:hover {display:block; text-decoration: none; background-color:#FFA56E;}
-
+/* el efecto solo al texto del enlace y no me desplaza hacia abajo*/
+.play2 a:hover {display:inline; text-decoration: none; background-color:#DB0909;}
+/* Definimos el comportamiento base de la imagen dentro del enlace */
+.play2 a img {
+  display: block; 
+  vertical-align: middle; /* Alinea la imagen a la altura del texto */
+  transition: background-color 0.3s ease; /* Opcional: hace el cambio suave */
+}
+/* El efecto hover SOLO se aplica a la imagen */
+.play2 a:hover img {
+  filter: brightness(1.2) sepia(1) hue-rotate(-50deg) saturate(5); 
+}
 }
 @media only screen and (min-width: 481px) {
 #banner{
