@@ -728,28 +728,31 @@ This is for mobile devices with a bit larger screens.
 */
 @media only screen and (min-width: 265px) {
 .play a:hover {display:block; text-decoration: none; background-color:#FFA56E;}
-/* el efecto solo al texto del enlace y no me desplaza hacia abajo*/
-.play2 a:hover {display:inline; text-decoration: none; background-color:#DB0909;}
-/* Definimos el comportamiento base de la imagen dentro del enlace */
-.play2 a img {
-  display: block; 
-  vertical-align: middle; /* Alinea la imagen a la altura del texto */
-  transition: background-color 0.3s ease; /* Opcional: hace el cambio suave */
+
+/* Regla general para los enlaces dentro de .play2 (afecta al texto) */
+.play2 a {
+  display: inline-block;
+  text-decoration: none;
+  line-height: normal; /* Asegura que el texto mantenga su separación natural */
+  margin-bottom: 15px; /* Espaciado opcional entre el texto y la imagen */
 }
+
+/* Regla ESPECÍFICA para el enlace que envuelve a la imagen */
+.play2 a:has(img) {
+  line-height: 0;
+  vertical-align: middle;
+}
+
+/* Comportamiento base de la imagen */
+.play2 a img {
+  display: block;
+  transition: filter 0.3s ease;  
+  background-color:#DB0909;
+}
+
 /* El efecto hover SOLO se aplica a la imagen */
 .play2 a:hover img {
-  filter: brightness(1.2) sepia(1) hue-rotate(-50deg) saturate(5); 
-}
-}
-@media only screen and (min-width: 481px) {
-#banner{
-	float:left;
-	text-align:left;
-	margin-bottom:-20px;/*this depends on the height of the logo*/
-}
-.menu-toggle{/*make menu float right, instead of sitting under the logo*/
-	margin-top:10px; /*this depends on the height of the logo*/
-	float:right;
+  filter: brightness(1.2) sepia(1) hue-rotate(-50deg) saturate(5);
 }
 
 } 
