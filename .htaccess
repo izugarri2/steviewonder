@@ -1,15 +1,16 @@
 DirectoryIndex index.html
-RewriteEngine On
-RewriteBase /
 
 <IfModule mod_rewrite.c>
-    # 0. Redirigir externamente /index e /index.html a la raíz /
-    RewriteCond %{ENV:REDIRECT_STATUS} ^$
-    RewriteRule ^index(\.html)?$ / [R=301,L,NC]
+    RewriteEngine On
+    RewriteBase /
 
-    # 1. Redirigir externamente de .html a sin .html
-    RewriteCond %{ENV:REDIRECT_STATUS} ^$
-    RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+    # 0. Redirigir cualquier /index o /index.html (en raíz o subcarpetas) a su carpeta limpia
+    RewriteCond %{THE_REQUEST} \s/+(.*/)?index(\.html)?[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+
+    # 1. Redirigir externamente de .html a sin .html (excluyendo index.html)
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L,NE]
 
     # 2. Reescritura interna: Servir el archivo .html sin mostrarlo en la URL
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -19,6 +20,7 @@ RewriteBase /
 </IfModule>
 
 ErrorDocument 404 /404.html
+
 
 
 
