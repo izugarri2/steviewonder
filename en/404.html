@@ -1,139 +1,94 @@
 ﻿<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-
+<html lang="en" id="html-lang">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="Refresh" content="8;url=/en/">
-<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<title>Page no found</title>
-<meta name="title" content="Web Stevie Wonder Hispana, STEVIE WONDER spanish web"/>
-<meta name="Subject" content="Page no found">
-<meta name="description" content="Página en castellano sobre Stevie Wonder, su Biografia, Discografia, Musica, Videos y mucho más..."> 
-<meta name="abstract" content="Pagina en castellano sobre Stevie Wonder, Stevie Wonder, la magia de Stevie Wonder"/>
-<meta name="keywords" content="Musica Stevie Wonder, Fingertips, Inspired by Lula, Magia musical, Discografia Stevie Wonder, Genio Stevie, Biografia Stevie Wonder, historia musica negra, Master Wonder, little Stevie Wonder, The 12 year old genius live, Arturo Sandoval, White House, Gershwin Prize, Make It Easy on Yourself, Burt Bacharach, Hal david, Genio Stevie">
-<meta name="robots" content="index,follow"/>
-<meta http-equiv="content-Language" content="en">
-<meta name="Revisit" content="15 days"/>
-<meta name="Distribution" content="General"/>
-<meta http-equiv="Pragma" content="cache"/>
-<meta name="Author" content="Izugarria"/>
-<!-- Mobile viewport -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
-<link rel="shortcut icon" href="//cdn.steviewonder.es/images/favicon.ico" type="image/x-icon"/>
-
-<!-- CSS-->
-
-
-
-<link rel="stylesheet" href="/en/css/basic-styleb.css">
-
-<!-- end CSS-->
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title id="page-title">Página no encontrada - Stevie Wonder</title>
+  <!-- Enlaza aquí tu hoja de estilos empezando siempre con / -->
+  <!-- <link rel="stylesheet" href="/css/estilos.css"> -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #111;
+      color: #f5f5f5;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: #f4b400;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    a.btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #f4b400;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    a.btn:hover {
+      background-color: #ffd54f;
+    }
+  </style>
 </head>
+<body>
 
-<body id="home">
+  <!-- AVISO EN ESPAÑOL -->
+  <main id="error-es" class="container">
+    <h1>404 - Página no encontrada</h1>
+    <p>Lo sentimos, la página que buscas no existe o ha cambiado de dirección.</p>
+    <p>Serás redirigido a la página principal en <strong id="countdown-es">5</strong> segundos...</p>
+    <a href="/" class="btn">Volver al inicio ahora</a>
+  </main>
 
+  <!-- AVISO EN INGLÉS -->
+  <main id="error-en" class="container" style="display: none;">
+    <h1>404 - Page not found</h1>
+    <p>Sorry, the page you are looking for does not exist or has been moved.</p>
+    <p>You will be redirected to the home page in <strong id="countdown-en">5</strong> seconds...</p>
+    <a href="/en/" class="btn">Go to home now</a>
+  </main>
 
+  <script>
+    (function () {
+      var path = window.location.pathname.toLowerCase();
+      var isEnglish = path === '/en' || path.startsWith('/en/');
+      var targetUrl = isEnglish ? '/en/' : '/';
+      var secondsLeft = 5;
 
+      if (isEnglish) {
+        document.getElementById('html-lang').lang = 'en';
+        document.getElementById('page-title').textContent = 'Page not found - Stevie Wonder';
+        document.getElementById('error-es').style.display = 'none';
+        document.getElementById('error-en').style.display = 'block';
+      }
 
-  
-<!-- header area -->
-    <header class="wrapper clearfix">
+      var countdownEl = document.getElementById(isEnglish ? 'countdown-en' : 'countdown-es');
 
+      var timer = setInterval(function () {
+        secondsLeft--;
+        if (countdownEl && secondsLeft >= 0) {
+          countdownEl.textContent = secondsLeft;
+        }
+        if (secondsLeft <= 0) {
+          clearInterval(timer);
+          window.location.replace(targetUrl);
+        }
+      }, 1000);
+    })();
+  </script>
 
-<center><img src="//cdn.steviewonder.es/images/Stevie.titulo.gif" alt="Stevie Wonder"  /></center>
-
-        <div id="banner">        
-        	<div id="logo"></div> 
-        </div>
-        
-        <!-- main navigation -->
-        <nav id="topnav" role="navigation">
-          <div class="menu-toggle" >Menu</div>  
-          <ul class="srt-menu"  style="border-radius:8px; padding:3px; border:groove #EEBBBD" id="menu-main-navigation">
-              <li class="current"><a href="/en/">Home</a></li>
-              <li><a href="/en/Biografia">Biography</a></li>
-              <li><a href="/en/discografia">Discography</a></li>
-              <li><a href="/en/videos">Videos</a></li>
-              <li><a href="/en/grammys">Grammys</a></li>  
-          </ul>    
-		</nav><!-- end main navigation -->
-  
-    </header><!-- end header -->
- 
- 
-<!-- hero area (the grey one with a slider -->
-    <section id="hero" class="clearfix">    
-    <!-- responsive FlexSlider image slideshow -->
-    
-    
-    <div class="wrapper" style="background-color: #07010F; padding:10px; border-radius:18px; border:groove #3A4657">  
-    
-<h1><center>Página no encontrada</center></h1>  
-<h1><center>no found</center></h1>  
-<div class="row" style="background-color: rgba(51, 51, 51, 0.7); padding:10px 10px 30px 10px; border-radius:18px; border:groove #3A4657"> 
-
-
-<div class="row">
-<div class="grid_12" style="padding-bottom:30px;">
-  <center><a href="/"><img src="/images/Error404.jpg" alt="Error"  /></a><br>go to home</center>
- <center><img src="/images/Error.gif" alt="Error"  /></center>
-</div>
-
-
-</div>
-
-
-    
-</div>
-
-</div>
-<!-- end wrapper -->
-
-   
-
-       
-
-       
-    </section><!-- end hero area -->
-
-
-
-
-
-
-    
-<!-- content area -->    
-	<section id="content" class="wide-content">
-    
-    
-<div id="colophon" class="wrapper clearfix" style="text-align: center ; ">
-    	<a href="/en/index" >Home</a>  |  <a href="/en/Biografia" >Biography</a>  |  <a href="/en/discografia" >Discography</a>  |  <a href="/en/videos" >Videos</a>  |  <a href="/en/grammys">Grammys</a>  |  <a href="/en/topten">Top ten</a>
-    
-
-<div id="copyright" class="wrapper clearfix" style="color:#fff; font-size:11px; line-height:1.4em; text-align: center">steviewonder.es ® is a registered trademark. All content © 2008-2026 by izugarria.<br> 
-Todos los contenidos del portal incluyendo, imágenes, vídeo, nombres, marcas y logos, son propiedad de sus respectivos dueños.</div>
-
-
-
-</div>
-	</section><!-- end content area -->   
-      
-
-<!-- footer area -->    
-<footer>  
-	
-
-</footer><!-- #end footer area --> 
-
-
-<!-- Begin Cookie Consent plugin --> <script type="text/javascript"> window.cookieconsent_options = {"theme":"dark-bottom"}; </script> <script type="text/javascript" src="//www.steviewonder.es/libs/cookieconsent.min.js"></script> <!-- End Cookie Consent plugin -->
-<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu&display=swap" rel="stylesheet" type="text/css">
 </body>
 </html>

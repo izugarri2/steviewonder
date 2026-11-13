@@ -19,7 +19,7 @@ RewriteBase /en/
 </IfModule>
 
 # Página de error 404 dentro de la carpeta /en/
-ErrorDocument 404 /en/paginadeerror.html
+ErrorDocument 404 /en/404.html
 
 
 
